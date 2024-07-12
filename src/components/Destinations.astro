@@ -1,0 +1,75 @@
+---
+import Card from "./core/card-basic.astro";
+const locations = [
+  {
+    name: "Cusco",
+    image: "/images/cusco.jpg",
+    paquetes: "240",
+    description:
+      "Cusco es una ciudad del sureste del Perú ubicada en la vertiente oriental de la cordillera de los Andes, en la cuenca del río Huatanay, afluente del Vilcanota. Es la capital del Departamento del Cuzco y además, está declarado en la constitución peruana como la capital histórica del país.",
+  },
+  {
+    name: "Machu Picchu",
+    image: "/images/machu-picchu.jpg",
+    paquetes: "340",
+    description:
+      "Machu Picchu es una antigua ciudad inca en la cordillera de los Andes en Perú. Es el sitio arqueológico más famoso de Sudamérica y una de las principales atracciones turísticas del mundo.",
+  },
+  {
+    name: "Lima",
+    image: "/images/lima.jpg",
+    paquetes: "120",
+    description:
+      "Lima es la capital de Perú y la ciudad más grande del país. Está situada en la costa central del país, a orillas del océano Pacífico, conformando una extensa y populosa área urbana conocida como Lima Metropolitana, flanqueada por el desierto costero y extendida sobre los valles de los ríos Chillón, Rímac y Lurín.",
+  },
+  {
+    name: "Arequipa",
+    image: "/images/arequipa.jpg",
+    paquetes: "180",
+    description:
+      "Arequipa es una ciudad del sur del Perú, capital de la provincia y del departamento homónimos, ubicada a 2325 metros sobre el nivel del mar. Es la segunda ciudad más poblada del país, después de Lima, y la segunda más extensa.",
+  },
+  {
+    name: "Puno",
+    image: "/images/puno.jpg",
+    paquetes: "200",
+    description:
+      "Puno es una ciudad del sureste del Perú, capital del distrito y de la provincia de Puno, ubicada a orillas del lago Titicaca, en la meseta del Collao, a una altitud de 3825 msnm. Es la ciudad más importante de la región Puno y la quinta más poblada del país.",
+  },
+  {
+    name: "Iquitos",
+    image: "/images/iquitos.jpg",
+    paquetes: "160",
+    description:
+      "Iquitos es una ciudad peruana ubicada en la parte noreste del país, capital de la provincia de Maynas y del departamento de Loreto. Es la ciudad más grande de la Amazonía peruana y la sexta ciudad más poblada del Perú.",
+  },
+  {
+    name: "Trujillo",
+    image: "/images/trujillo.jpg",
+    paquetes: "140",
+    description:
+      "Trujillo es una ciudad peruana, capital de la provincia homónima y del departamento de La Libertad. Se encuentra ubicada en la parte noroeste del país, a orillas del océano Pacífico, a unos 561 km al norte de Lima, la capital del país.",
+  }
+];
+---
+
+<section class="flex flex-col m-auto w-full max-w-screen-2xl py-32">
+  <div class="sm:px-8 lg:px-16 xl:px-24 w-full">
+    <h1 class="text-3xl text-center text-[#051036] font-semibold mb-5">
+      Popular Destinations
+    </h1>
+    <p class="text-wrap text-center text-[#697488] mb-12">
+      Encuentra los mejores destinos turísticos en Peru, disfruta de la cultura,
+      gastronomía y paisajes que este hermoso país tiene para ofrecerte.
+    </p>
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-3"
+    >
+      {
+        locations.map((location) => (
+          <Card location={location.name} paquetes={location.paquetes} />
+        ))
+      }
+    </div>
+  </div>
+</section>

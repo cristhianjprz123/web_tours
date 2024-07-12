@@ -1,0 +1,66 @@
+---
+import { Icon } from "astro-icon/components";
+---
+<main class=" w-full flex relative  justify-center">
+<form class="flex items-center absolute p-3 bg-white    rounded-full bottom-16  shadow-[0_10px_40px_0px_rgba(0,0,0,0.05)]">
+  <div class="flex flex-row items-center space-x-1">
+    <div class="border-[#e7e6e6] border p-3 rounded-full">
+      <Icon name="location" class="w-6 h-6 text-[#051036]" />
+    </div>
+    <div class="flex flex-col w-full px-3 ">
+      <label for="search">Location</label>
+      <input
+        type="text"
+        id="search"
+        name="search"
+        placeholder="Where are you going?"
+        class="w-full p-0 border-none flex-none"
+      />
+    </div>
+    <div class="border-[#e7e6e6] border p-3 rounded-full">
+      <Icon name="calendar" class="w-6 h-6 text-[#051036]" />
+    </div>
+    <div class="flex flex-col w-full px-3 min-w-[150px]">
+      <label for="check-in">Check in</label>
+      <input
+        type="date"
+        id="check-in"
+        name="check-in"
+        placeholder="Check in"
+        class="w-full p-0 border-none"
+      />
+    </div>
+    <div class="border-[#e7e6e6] border p-3 rounded-full">
+      <Icon name="calendar" class="w-6 h-6 text-[#051036]" />
+    </div>
+    <div class="flex flex-col w-full px-3 min-w-[150px]">
+      <label for="check-out">Check out</label>
+      <input
+        type="date"
+        id="check-out"
+        name="check-out"
+        placeholder="Check out"
+        class="w-full p-0 border-none"
+      />
+    </div>
+    <div class="border-[#e7e6e6] border p-3 rounded-full">
+      <Icon name="travels" class="w-6 h-6 text-[#051036]" />
+    </div>
+    <div class="flex flex-col  px-3 ">
+      <label for="travels">Travels</label>
+      <input
+        type="text"
+        id="travels"
+        name="travels"
+        placeholder="8 people"
+        class="w-16 p-0 border-none "
+      />
+    </div>
+
+    <button class="bg-[#051036] text-white flex flex-row items-center space-x-2 p-[30px] py-[15px]  rounded-full">
+        <Icon name="search" class="w-4 h-4" />
+        <span>Search</span>
+    </button>
+  </div>
+</form>
+</main>

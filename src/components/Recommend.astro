@@ -1,0 +1,58 @@
+---
+import CardRecommend from "./core/card-recommend.astro";
+
+const tours = [
+  {
+    title: "Isla de Taquile - Titicaca",
+    description:
+      "Excursión de 9 días Cusco, Valle Sagrado, Lago Titicaca Hotel.",
+    price: "36,34",
+    image:
+      "https://cdn.getyourguide.com/img/tour/2ea56dc7ebcedf3f.jpeg/145.jpg",
+    duracion: "1dia • Recogida Disponible",
+    estado: "Nueva Actividad",
+  },
+  {
+    title: "Cañón del Colca - Arequipa",
+    description: "Excursión de 2 días al Cañón del Colca con Traslado a Puno.",
+    price: "29,56",
+    image: "https://cdn.getyourguide.com/img/tour/5cd007e7b77cf.jpeg/145.jpg",
+    duracion: "2dias • Recogida Disponible",
+    estado: "Oferta",
+  },
+  {
+    title: "Paracas y Huacachina - Ica",
+    description: "Excursión de un día a Paracas y el Oasis de la Huacachina.",
+    price: "43,23",
+    image: "https://cdn.getyourguide.com/img/tour/643707872698f.jpeg/145.jpg",
+    duracion: "16 horas",
+    estado: "Destacado",
+  },
+  
+];
+---
+
+<section class="flex flex-col m-auto w-full max-w-screen-2xl py-12">
+  <div class="sm:px-8 lg:px-16 xl:px-24 w-full">
+    <h1 class="text-3xl text-center text-[#051036] font-semibold mb-5">
+      Tours Recomendados
+    </h1>
+    <p class="text-wrap text-center text-[#697488] mb-12">
+        Descubre los tours más populares y recomendados por nuestros clientes.
+    </p>
+    <div class="grid grid-cols-2 lg:grid-cols-3  gap-3">
+      {
+        tours.map((tour) => (
+          <CardRecommend
+            titulo={tour.title}
+            descripcion={tour.description}
+            precio={tour.price}
+            imagen={tour.image}
+            duracion={tour.duracion}
+            estado={tour.estado}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,52 @@
+---
+import { Icon } from "astro-icon/components";
+interface Props {
+  titulo: string;
+  descripcion: string;
+  precio: string;
+  estrellas?: number;
+  imagen: string;
+  estado: string;
+  duracion: string;
+}
+
+const { titulo, descripcion, precio, estrellas, imagen, estado, duracion } =
+  Astro.props;
+---
+
+<div>
+  <a href="#" class="flex flex-col gap-3">
+    <div class="relative w-[300px]">
+      <img src={imagen} alt={titulo} class="rounded object-cover w-full h-48" />
+    </div>
+    <div class="flex flex-col gap-1 pb-2">
+      <h2 class="text-sm text-[#697488]">{titulo}</h2>
+      <p class="font-medium text-lg text-[#051036]">
+        {descripcion}
+      </p>
+      <p class="text-[#697488] text-sm">{duracion}</p>
+      <span
+        class="bg-[#ebeef1] font-medium text-sm w-fit px-2 py-0.5 rounded-sm text-[#051036]"
+      >
+        {estado}
+      </span>
+    </div>
+    <div class="flex flex-row gap-1">
+      <div class="flex flex-row item-center gap-0.5">
+        <Icon name="estrella" class="text-yellow-300 w-4 h-4" />
+        <Icon name="estrella" class="text-yellow-300 w-4 h-4" />
+        <Icon name="estrella" class="text-yellow-300 w-4 h-4" />
+        <Icon name="estrella" class="text-yellow-300 w-4 h-4" />
+        <Icon name="estrella" class="text-yellow-300 w-4 h-4" />
+      </div>
+      <p
+        class="text-sm font-medium leading-none text-gray-500 dark:text-gray-400"
+      >
+        (4.6)
+      </p>
+    </div>
+    <span class="text-[#051036] text-sm font-medium"
+      >Desde {precio}USD por persona</span
+    >
+  </a>
+</div>

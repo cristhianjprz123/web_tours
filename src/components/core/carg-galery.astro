@@ -1,0 +1,33 @@
+---
+ import { Icon } from "astro-icon/components";
+interface Props {
+  titulo: string;
+  descripcion: string;
+  precio: string;
+  estrellas?: number;
+  imagen: string;
+  estado: string;
+  duracion: string;
+}
+const { titulo, descripcion, precio, estrellas, imagen, estado, duracion } =
+  Astro.props;
+---
+
+<div class="w-full h-full rounded-2xl relative cursor-pointer">
+  <img
+    src="{{ site.baseurl }}/assets/images/cover.jpg"
+    class="object-cover w-full h-full rounded-2xl object-center block"
+    alt="imag1"
+    width="600"
+    height="600"
+  />
+  <div class="absolute inset-0 bg-white rounded-2xl">
+    <Icon name="estrella" class="absolute top-2 right-2 text-yellow-300 w-4 h-4" />
+    <span> 4.8 </span>
+  </div>
+  <div>
+    <h1 class="text-2xl font-bold text-white">lugar</h1>
+    <p class="text-white">Ubicacion</p>
+    <span class="text-white">Precio</span>
+  </div>
+</div>
